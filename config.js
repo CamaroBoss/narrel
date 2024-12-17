@@ -3,6 +3,7 @@ const config = {
   users: {
     // You can add multiple users by doing
     nigger: "owen",
+    brayden: "gray",
     interstellar: "password",
   },
 };
