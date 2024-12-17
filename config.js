@@ -5,7 +5,7 @@ const config = {
     mike: "lunini",
     brayden: "gray",
     ethan:"28",
-    ojf0103: "1234";
+    ojf0103: "1234",
   
     interstellar: "password",
   },
