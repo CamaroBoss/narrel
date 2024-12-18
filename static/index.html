@@ -11,7 +11,32 @@
     <link rel="stylesheet" href="/assets/css/h.css?v=01" />
     <link rel="stylesheet" href="/assets/css/nav.css?v=01" />
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840529569014734"
-     crossorigin="anonymous"></script>
+     crossorigin="anonymous"></script><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <script>
+      function themeChange(selectElement) {
+        const selectedValue = selectElement.value;
+        
+        if (selectedValue === "sunset") {
+          // Change background image
+          document.body.style.backgroundImage = "url('/static/assets/media/background/sunset.png')";
+          
+          // Load sunset CSS
+          const link = document.createElement("link");
+          link.rel = "stylesheet";
+          link.href = "/static/assets/css/themes/colors/sunset.css";
+          document.head.appendChild(link);
+        } else {
+          // Reset to default or other theme styles
+          document.body.style.backgroundImage = ""; // Reset background image
+          const sunsetStyles = document.querySelector('link[href="/static/assets/css/themes/colors/sunset.css"]');
+          if (sunsetStyles) {
+            sunsetStyles.remove();
+          }
+        }
+      }
+    </script>
   </head>
   <body class="center" onload="SplashT">
     <div class="f-nav"></div>
