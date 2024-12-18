@@ -6,6 +6,7 @@ const config = {
     brayden: "gray",
     ethan:"28",
     ojf0103: "1234",
+    Commander: "Chubb",
   
     interstellar: "password",
   },
