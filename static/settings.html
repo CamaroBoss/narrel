@@ -14,7 +14,33 @@
     <link rel="stylesheet" href="/assets/css/settings.css?v=06" />
     <script src="assets/js/f.js"></script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6840529569014734" crossorigin="anonymous"></script>
-  </head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <!-- Other head elements -->
+    <script>
+      function themeChange(selectElement) {
+        const selectedValue = selectElement.value;
+        
+        if (selectedValue === "sunset") {
+          // Change background image
+          document.body.style.backgroundImage = "url('/static/assets/media/background/sunset.png')";
+          
+          // Load sunset CSS
+          const link = document.createElement("link");
+          link.rel = "stylesheet";
+          link.href = "/static/assets/css/themes/colors/sunset.css";
+          document.head.appendChild(link);
+        } else {
+          // Reset to default or other theme styles
+          document.body.style.backgroundImage = ""; // Reset background image
+          const sunsetStyles = document.querySelector('link[href="/static/assets/css/themes/colors/sunset.css"]');
+          if (sunsetStyles) {
+            sunsetStyles.remove();
+          }
+        }
+      }
+    </script> </head>
   <body>
     <div class="f-nav"></div>
     <div class="main">
@@ -176,18 +202,13 @@
           <h3>Themes!</h3>
           <p>Pick from a variety of themes to customize your experience.</p>
           <select id="themeDropdown" class="td" onchange="themeChange(this)">
-            <option disabled selected>Solid Color Themes</option>
-            <option value="d">Default</option>
-            <option value="Inverted">Inverted</option>
-            <option value="sunset">Sunset</option>
-            <option value="sky">Sky</option>
-            <option disabled selected>Catppuccin Themes</option>
-            <option value="catppuccinMocha">Mocha</option>
-            <option value="catppuccinMacchiato">Macchiato</option>
-            <option value="catppuccinFrappe">Frappe</option>
-            <option value="catppuccinLatte">Latte</option>
-            <option disabled selected>Custom Themes</option>
-          </select>
+        <option disabled selected>Solid Color Themes</option>
+        <option value="d">Default</option>
+        <option value="Inverted">Inverted</option>
+        <option value="sunset">Sunset</option>
+        <option value="sky">Sky</option>
+        <option disabled selected>Catppuccin Themes</option>
+    </select>
         </div>
         <div class="settings-card">
           <h3>Information</h3>
