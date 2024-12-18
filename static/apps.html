@@ -1,7 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <script>
+  function themeChange(selectElement) {
+    const selectedValue = selectElement.value;
+
+    if (selectedValue === "sunset") {
+      // Change background image
+      document.body.style.backgroundImage = "url('/static/assets/media/background/sunset.png')";
+      
+      // Load sunset CSS
+      const link = document.createElement("link");
+      link.rel = "stylesheet";
+      link.href = "/static/assets/css/themes/colors/sunset.css";
+      document.head.appendChild(link);
+    } else {
+      // Reset to default or other theme styles
+      document.body.style.backgroundImage = ""; // Reset background image
+      const sunsetStyles = document.querySelector('link[href="/static/assets/css/themes/colors/sunset.css"]');
+      if (sunsetStyles) {
+        sunsetStyles.remove();
+      }
+    }
+  }
+</script><meta charset="UTF-8" />
     <meta name="referrer" content="no-referrer" />
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
     <meta http-equiv="X-Content-Type-Options" content="nosniff" />
