@@ -7,6 +7,7 @@ const config = {
     ethan:"28",
     ojf0103: "1234",
     Commander: "Chubb",
+    parkrey221: "Dky3314_",
   
     interstellar: "password",
   },
