@@ -8,6 +8,7 @@ const config = {
     ojf0103: "1234",
     Commander: "Chubb",
     parkrey221: "Dky3314_",
+    alt1234bob: "10/21/08",
   
     interstellar: "password",
   },
