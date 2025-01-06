@@ -4,7 +4,6 @@ const config = {
     // You can add multiple users by doing
     mike: "lunini",
     brayden: "gray",
-    ethan:"28",
     ojf0103: "1234",
     Commander: "Chubb",
     parkrey221: "Dky3314_",
